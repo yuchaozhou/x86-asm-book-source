@@ -6,4 +6,4 @@ all:c08_mbr.asm
 	dd if=/dev/zero of=mbr.img count=10000
 	dd if=c08_mbr.bin of=mbr.img conv=notrunc
 	dd if=c08.bin of=mbr.img seek=100  conv=notrunc
-	VBoxManage convertfromraw mbr.img myfile.vhd --format VHD
+	VBoxManage convertfromraw mbr.img myfile.vhd --format VHD --variant Fixed

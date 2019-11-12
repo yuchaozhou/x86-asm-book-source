@@ -9,4 +9,4 @@ all:c13_mbr.asm
 	dd if=core.bin of=mbr.img seek=1  conv=notrunc
 	dd if=c13.bin of=mbr.img seek=50  conv=notrunc
 	dd if=diskdata.txt of=mbr.img seek=100  conv=notrunc
-	VBoxManage convertfromraw mbr.img c13.vhd --format VHD
+	VBoxManage convertfromraw mbr.img c13.vhd --format VHD --variant Fixed
